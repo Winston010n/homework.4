@@ -1,0 +1,142 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>О нас — Aurora Hotel</title>
+  <meta name="description" content="Узнайте больше об Aurora Hotel: наша история, ценности и забота о каждом госте.">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+  <header class="header solid">
+    <div class="wrap header-inner">
+      <a href="{% url 'hotel:home' %}" class="logo">AURORA<span>.</span></a>
+      <button class="burger" aria-label="Меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav">
+        <a href="{% url 'hotel:home' %}">Главная</a>
+        <a href="{% url 'hotel:rooms' %}">Номера</a>
+        <a href="{% url 'hotel:about' %}" class="active">О нас</a>
+        <a href="{% url 'hotel:contact' %}">Контакты</a>
+        <a href="{% url 'hotel:contact' %}" class="btn btn-primary">Забронировать</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <img src="{% static 'images/about.jpg' %}" alt="Тихий внутренний двор Aurora Hotel" class="hero-bg">
+      <div class="wrap">
+        <span class="eyebrow">Наша история</span>
+        <h1>О нас</h1>
+        <p>Создали место, где можно замедлиться, услышать море и почувствовать себя как дома.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap split reveal">
+        <div>
+          <span class="eyebrow">Aurora Hotel</span>
+          <h2>Гостеприимство в деталях</h2>
+          <p style="color:var(--gray); margin-top:16px;">
+            Aurora — небольшой бутик-отель на побережье Актау. С 2014 года мы принимаем гостей,
+            которым важны тишина, продуманный комфорт и искреннее внимание.
+          </p>
+          <p style="color:var(--gray); margin-top:12px;">
+            Мы выбрали спокойную архитектуру, натуральные материалы и светлые пространства,
+            чтобы ничто не отвлекало от отдыха. Наша команда помогает с размещением, трансфером
+            и любыми вопросами во время поездки.
+          </p>
+          <div class="stats">
+            <div class="stat"><b>2014</b><span>год открытия</span></div>
+            <div class="stat"><b>48</b><span>уютных номеров</span></div>
+            <div class="stat"><b>24/7</b><span>мы на связи</span></div>
+          </div>
+        </div>
+        <div class="split-img">
+          <img src="{% static 'images/terrace.jpg' %}" alt="Терраса Aurora Hotel у моря">
+        </div>
+      </div>
+    </section>
+
+    <section class="section-alt">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Наш подход</span>
+          <h2>Отдых, о котором заботятся</h2>
+          <p>Всё необходимое для спокойного пребывания — в одном месте.</p>
+        </div>
+        <div class="features reveal">
+          <article class="feature">
+            <span class="num">01</span>
+            <h3>Внимание к гостю</h3>
+            <p>Подскажем, поможем с планами и учтём ваши пожелания.</p>
+          </article>
+          <article class="feature">
+            <span class="num">02</span>
+            <h3>Комфорт без лишнего</h3>
+            <p>Светлые номера, необходимые удобства и ежедневная уборка.</p>
+          </article>
+          <article class="feature">
+            <span class="num">03</span>
+            <h3>Всё рядом</h3>
+            <p>Пляж, бассейн, спа и ресторан находятся на территории отеля.</p>
+          </article>
+          <article class="feature">
+            <span class="num">04</span>
+            <h3>Всегда на связи</h3>
+            <p>Наша стойка регистрации работает круглосуточно.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <img src="{% static 'images/pool.jpg' %}" alt="" class="hero-bg">
+      <div class="wrap">
+        <span class="eyebrow" style="color:#fff;">Будем рады встрече</span>
+        <h2>Планируете поездку?</h2>
+        <p>Расскажите нам о своих планах — поможем выбрать номер и подготовить отдых.</p>
+        <a href="{% url 'hotel:contact' %}" class="btn btn-light">Связаться с нами</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a href="{% url 'hotel:home' %}" class="logo">AURORA<span>.</span></a>
+          <p style="margin-top:14px; max-width:320px;">Бутик-отель на побережье: 48 номеров, спа, ресторан и панорамный бассейн.</p>
+        </div>
+        <div>
+          <h4>Разделы</h4>
+          <ul>
+            <li><a href="{% url 'hotel:home' %}">Главная</a></li>
+            <li><a href="{% url 'hotel:rooms' %}">Номера</a></li>
+            <li><a href="{% url 'hotel:about' %}">О нас</a></li>
+            <li><a href="{% url 'hotel:contact' %}">Контакты</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Контакты</h4>
+          <ul>
+            <li>ул. Приморская, 12</li>
+            <li><a href="tel:+77001234567">+7 700 123-45-67</a></li>
+            <li><a href="mailto:stay@aurora-hotel.kz">stay@aurora-hotel.kz</a></li>
+            <li>Ресепшн 24/7</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="year">2026</span> Aurora Hotel. Учебный шаблон.</span>
+        <span>Фотографии: Unsplash</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>

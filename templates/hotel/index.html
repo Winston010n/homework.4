@@ -22,6 +22,7 @@
       <nav class="nav">
         <a href="{% url 'hotel:home' %}" class="active">Главная</a>
         <a href="{% url 'hotel:rooms' %}">Номера</a>
+        <a href="{% url 'hotel:about' %}">О нас</a>
         <a href="{% url 'hotel:contact' %}">Контакты</a>
         <a href="{% url 'hotel:contact' %}" class="btn btn-primary">Забронировать</a>
       </nav>
@@ -215,6 +216,7 @@
           <ul>
             <li><a href="{% url 'hotel:home' %}">Главная</a></li>
             <li><a href="{% url 'hotel:rooms' %}">Номера</a></li>
+            <li><a href="{% url 'hotel:about' %}">О нас</a></li>
             <li><a href="{% url 'hotel:contact' %}">Контакты</a></li>
             <li><a href="{% url 'hotel:contact' %}">Бронирование</a></li>
           </ul>
